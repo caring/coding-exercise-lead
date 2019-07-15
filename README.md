@@ -1,17 +1,18 @@
 # Caring.com Coding Exercise
 
-This repository contains a Rails application that implements parts of a very simple sales lead delivery system. We define an API where a new lead's email address is stored in our system. We also [define a mailer](./app/mailers/lead_mailer.rb) which will be used to send these email addresses to [an existing set of lead recipients](./db/seeds.rb), however the act of sending these leads has yet to be implemented.
+This repository contains a Rails application that implements parts of a very simple sales lead delivery system. We define an API where a new lead's email address is stored in our system. We also define a mailer which will be used to send these email addresses to an existing set of lead recipients, however the act of sending these leads has yet to be implemented.
 
 Key files:
-- app/models/lead.rb
-- app/models/lead_recipient.rb
-- app/controllers/api/leads_controller.rb
-- app/mailers/lead_mailer.rb
-- app/views/lead_mailer/new_lead.html.erb
+- [app/models/lead.rb](./app/models/lead.rb)
+- [app/models/lead_recipient.rb](./app/models/lead_recipient.rb)
+- [app/controllers/api/leads_controller.rb](./app/controllers/api/leads_controller.rb)
+- [app/mailers/lead_mailer.rb](./app/mailers/lead_mailer.rb)
+- [app/views/lead_mailer/new_lead.html.erb](./app/views/lead_mailer/new_lead.html.erb)
+- [db/seeds.rb](./db/seeds.rb)
 
 ## Specification
 
-When [a new lead is created through the API](./app/controllers/api/leads_controller.rb) it should trigger the [LeadMailer#new_lead](./app/mailers/lead_mailer.rb) email to be sent to every `LeadRecipient` in our system
+When a new lead is created through the API it should trigger the lead mailer email to be sent to every recipient in our system
   - This email should contain the lead's email address in the subject and the body
   - If this email fails to send to any given recipient, it should still be sent to the rest of the recipients
   - If this email fails to send to any given recipient due to an SMTP error, and an admin changes that recipient's email address, the send should be retried
@@ -20,7 +21,7 @@ When [a new lead is created through the API](./app/controllers/api/leads_control
 
 You may assume that two leads with the same email address never occur.
 
-I should be able to visit the root path `/` and see a list of all the leads in the system
+Any visitor should be able to visit the root path `/` and see a list of all the leads in the system
   - This list should enumerate which recipients have received an email, and which have not
   - If a recipient has not received an email due to an SMTP error, that error should be visible
   - If a recipient has not received an email because their account was created after the lead was created, they should not be included in the list
