@@ -30,8 +30,6 @@ Any visitor should be able to visit the root path `/` and see a list of all the 
 
 Please treat this, within reason, like it was a production grade project. Feel free to use any libraries you would use for such a project.
 
-If you have any questions don't hesitate to ask!
-
 ### Technical questions
 
 Please answer the following questions in a markdown file called `Answers to technical questions.md`.
@@ -39,3 +37,10 @@ Please answer the following questions in a markdown file called `Answers to tech
 1. How long did you spend on the exercise? What would you add to your solution if you had more time? If you didn't spend much time on the exercise then use this as an opportunity to explain what you would add.
 2. What was the most useful feature that you used that was added to a recent version of Ruby? Please link to a place where you used it.
 3. How would you track down a performance issue in production? Have you ever had to do this?
+
+
+## Submission
+
+When finished, please upload your solution as a .zip / .tar.gz, complete with git repo, to Dropbox / Google Drive etc, and send a link to mbessey@caring.com. Please don't publicly fork the repo, we don't want candidates drawing "inspiration" from each other 😉.
+
+If you have any questions don't hesitate to ask!
