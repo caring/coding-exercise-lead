@@ -6,7 +6,7 @@ Key files:
 - [app/models/lead.rb](./app/models/lead.rb)
 - [app/models/lead_recipient.rb](./app/models/lead_recipient.rb)
 - [app/controllers/api/leads_controller.rb](./app/controllers/api/leads_controller.rb)
-- [/test/controllers/api/leads_controller_test.rb](/test/controllers/api/leads_controller_test.rb)
+- [test/controllers/api/leads_controller_test.rb](/test/controllers/api/leads_controller_test.rb)
 - [app/mailers/lead_mailer.rb](./app/mailers/lead_mailer.rb)
 - [app/views/lead_mailer/new_lead.html.erb](./app/views/lead_mailer/new_lead.html.erb)
 - [db/seeds.rb](./db/seeds.rb)
